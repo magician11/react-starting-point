@@ -25,3 +25,6 @@ From there code and work as per normal with this little jumpstart :)
 - To run the local server, then type `npm run dev`
 - and then to view your app running, goto [http://localhost:8080](http://localhost:8080).
 
+## License
+
+MIT
