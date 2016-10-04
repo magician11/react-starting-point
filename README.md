@@ -9,13 +9,7 @@ Uses: eslint, webpack, sass, es6
 - Get a copy of this boilerplate by typing `git clone https://github.com/magician11/react-starting-point.git [my-project]`
 - Then `cd [my-project]`
 
-## To get this running..
-
-- Install the packages by typing `npm install`
-- To run the local server, then type `npm run dev`
-- and then to view your app running, goto [http://localhost:8080](http://localhost:8080).
-
-## To make this basis for your new project..
+## To update this boilerplate to point to your repository..
 
 - Goto GitHub and [create a new repository](https://github.com/new)
 - Now remove the current remote that is pointing to this starting point repo, by typing `git remote rm origin`
@@ -24,3 +18,10 @@ Uses: eslint, webpack, sass, es6
 - Finally commit these initial changes by typing `git push -u origin master`
 
 From there code and work as per normal with this little jumpstart :)
+
+## To build and run this dev environment..
+
+- Install the packages by typing `npm install`
+- To run the local server, then type `npm run dev`
+- and then to view your app running, goto [http://localhost:8080](http://localhost:8080).
+
