@@ -23,13 +23,13 @@ From there code and work as per normal with this little jumpstart :)
 
 - Install the packages by typing `npm install`
 - To run the local server, then type `npm run dev`
-- and then to view your app running, goto [http://localhost:8080](http://localhost:8080).
+- and then to view your app running, goto [http://localhost:8080](http://localhost:8080)
 
 ## To build your project for deployment..
 
-- Type `npm run build`
+Type `npm run build`
 
-You'll find your files in a `dist` directory
+You'll find your files in a `dist` directory.
 
 ## License
 
