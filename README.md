@@ -21,13 +21,13 @@ From there code and work as per normal with this little jumpstart :)
 
 ## To develop in a hot reloading environment..
 
-- Install the packages by typing `npm install`
-- To run the local server, then type `npm run dev`
+- Install the packages by typing `yarn`
+- To run the local server, then type `yarn dev`
 - and then to view your app running, goto [http://localhost:8080](http://localhost:8080)
 
 ## To build your project for deployment..
 
-Type `npm run build`
+Type `yarn build`
 
 You'll find your files in a `dist` directory.
 
