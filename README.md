@@ -33,4 +33,4 @@ You'll find your files in a `dist` directory.
 
 ## License
 
-MIT
+ISC
