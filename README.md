@@ -2,7 +2,7 @@
 
 Simple and solid starting point for React.js apps.
 
-Uses: eslint, webpack, sass, es6
+Uses: eslint, webpack, sass, es6, react-bootstrap, react
 
 ## To start..
 
