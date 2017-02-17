@@ -1,33 +1,46 @@
-import React from 'react';
-import { Grid, Row, Col, PageHeader, Well } from 'react-bootstrap';
-import { Link } from 'react-router';
+import React, { Component } from 'react';
+import { Grid, Row } from 'react-bootstrap';
+import { Match, BrowserRouter, Miss } from 'react-router';
+import Homepage from './homepage';
+import Loader from './loader';
 
-import styling from '../styling/main.scss';
+import 'bootstrap/dist/css/bootstrap.css';
+import '../styling/index.css';
 
-const YourApp = props =>
-(
-  <Grid className={styling['your-app']}>
-    <Row className="show-grid">
-      <Col xs={12}>
-        <PageHeader>
-          Andrew's React Starting Point <small>with Bootstrap, React Router, Sass</small>
-        </PageHeader>
-        {props.children}
-        <Well bsSize="small">
-          <h3>Navigation</h3>
-          <ul className="list-inline">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/people">People</Link></li>
-          </ul>
-        </Well>
-      </Col>
-    </Row>
-  </Grid>
-);
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    // set your initial state here
+    this.state = {
+      loading: true,
+    };
+  }
 
-YourApp.propTypes = {
-  children: React.PropTypes.node,
-};
+  componentDidMount () {
+    // do any initial ajax calls here
+  }
 
-export default YourApp;
+  render() {
+    let content;
+    if(this.state.loading === true) {
+      content = content = <Loader loaderStatus='Initialising awesomeness' />;
+    } else {
+      content = (
+        <BrowserRouter basename="/my-app">
+          {({router}) => (
+            <div className="my-app">
+              <Grid className="body">
+                <Row>
+                  <Match render={props => <Homepage {...props} />} pattern='/' exactly />
+                  <Miss render={() => <h3>Whoops! How did you get here? :)</h3>} />
+                </Row>
+              </Grid>
+              <Footer />
+            </div>
+          )}
+        </BrowserRouter>
+    );
+  }
+
+  return content;
+}
